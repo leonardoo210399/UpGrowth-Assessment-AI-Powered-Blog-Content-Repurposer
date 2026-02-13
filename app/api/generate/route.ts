@@ -13,7 +13,7 @@ const google = createGoogleGenerativeAI({
 const contentSchema = z.object({
   linkedin: z.array(z.object({
     type: z.string().describe("The style of the post (e.g., Educational, Controversial, Story)"),
-    content: z.string().describe("The full text of the LinkedIn post. Should be engaging and well-formatted.")
+    content: z.string().describe("The full text of the LinkedIn post. USE PARAGRAPH BREAKS (\\n\\n) to make it readable. Do not produce a single block of text.")
   })).describe("3 distinct LinkedIn post variations"),
   
   twitter: z.array(z.string()).describe("A Twitter thread consisting of 5-7 tweets. Each string is one tweet."),
@@ -49,7 +49,7 @@ export async function POST(req: NextRequest) {
       
       INSTRUCTIONS:
       1. Analyze the core message, hook, and value pillars of the blog.
-      2. For LinkedIn: Create 3 distinct posts. One educational, one controversial/opinionated, and one personal/story-driven hook.
+      2. For LinkedIn: Create 3 distinct posts. One educational, one controversial/opinionated, and one personal/story-driven hook. USE SHORT PARAGRAPHS AND CLEAR LINE BREAKS.
       3. For Twitter: Create a cohesive thread that breaks down the blog into bite-sized insights.
       4. For SEO: Create a click-worthy title/desc.
       5. For Video: Imagine this as a YouTube video. Give me a title and a script outline.
