@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AI Blog Content Repurposer
 
-## Getting Started
+An AI-powered application that instantly transforms any blog post URL into viral social media assets (LinkedIn, Twitter, SEO, Video).
 
-First, run the development server:
+## Overview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+This tool was built to bridge the gap between long-form content and platform-specific short-form needs. It leverages:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Content Extraction**: A robust Node.js scraper (`cheerio`) that intelligently parses blog content from various DOM structures (e.g., standard WordPress, Medium, custom sites).
+- **Generative AI**: Google Gemini 1.5 Flash (via Vercel AI SDK) for fast, structured, and context-aware repurposing.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Input**: Takes any valid URL.
+- **Extraction**: Handles `entry-content`, `article`, `main`, and fallback selectors.
+- **AI Output**:
+  - 👔 **LinkedIn**: 3 Distinct variations (Educational, Controversial, Story).
+  - 🐦 **Twitter**: A full 5-7 tweet thread (optimized for engagement).
+  - 🔍 **SEO**: Meta Title & Description optimized for CTR.
+  - 🎥 **Video**: YouTube Title & Script Outline.
+- **UI/UX**:
+  - Clean, modern interface using **shadcn/ui**.
+  - One-click "Copy to Clipboard" functionality.
+  - Real-time loading states and error handling.
 
-## Learn More
+## Tech Stack Choices
 
-To learn more about Next.js, take a look at the following resources:
+- **Next.js 14 (App Router)**: Chosen for its server-side capabilities (easy API routes for scraping) and React Server Components for performance.
+- **Tailwind CSS + shadcn/ui**: Selected to ensure a professional, consistent design system without reinventing the wheel. It allows for rapid UI iteration.
+- **Vercel AI SDK + Google Gemini**: Used for its type-safe structured output generation (`generateObject`) and Gemini's generous free tier/speed (Flash 1.5).
+- **Cheerio**: Preferred over Puppeteer for speed and lower resource overhead. Most blogs are static enough for simple HTML parsing.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Setup Instructions
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1.  **Clone the repository**:
 
-## Deploy on Vercel
+    ```bash
+    git clone https://github.com/yourusername/ai-content-repurposer.git
+    cd ai-content-repurposer
+    ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2.  **Install dependencies**:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+    ```bash
+    npm install
+    ```
+
+3.  **Configure Environment Variables**:
+    Create a `.env` file in the root directory:
+
+    ```env
+    GEMINI_API_KEY=your_google_gemini_api_key
+    ```
+
+4.  **Run Development Server**:
+
+    ```bash
+    npm run dev
+    ```
+
+5.  **Access the App**:
+    Open `http://localhost:3000` in your browser.
+
+## AI Tools Used
+
+- **Google Gemini 1.5 Flash**: For the core content generation logic.
+- **Vercel AI SDK**: For seamless integration with Next.js.
+- **AI Coding Assistant**: Used for scaffolding components and refining prompt engineering strategies.
+
+## Future Improvements (Next 2 Hours)
+
+- **User Authentication**: To save generation history per user.
+- **Custom Tone Selector**: Allow users to toggle between "Professional", "Casual", or "Viral" tones.
+- **Direct Publishing**: Integrate LinkedIn/Twitter APIs to post directly from the dashboard.
+
+---
+
+Built for the upGrowth Assessment.
