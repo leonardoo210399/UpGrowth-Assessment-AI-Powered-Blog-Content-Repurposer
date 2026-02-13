@@ -10,7 +10,6 @@ export async function POST(req: NextRequest) {
             return NextResponse.json({ error: "URL is required" }, { status: 400 });
         }
 
-        console.log("Scraping URL:", url);
         const data = await scrapeUrl(url);
         
         return NextResponse.json({

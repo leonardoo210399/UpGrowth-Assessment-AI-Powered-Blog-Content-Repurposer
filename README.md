@@ -2,7 +2,7 @@
 
 **A production-ready tool that transforms any blog post URL into high-performing social media assets instantly.**
 
-![Project Status](https://img.shields.io/badge/Status-Completed-success) ![Stack](https://img.shields.io/badge/Stack-Next.js_14-black) ![AI](https://img.shields.io/badge/AI-Gemini_1.5_Flash-blue)
+![Project Status](https://img.shields.io/badge/Status-Completed-success) ![Stack](https://img.shields.io/badge/Stack-Next.js_14-black) ![AI](https://img.shields.io/badge/AI-Gemini_3_Flash-blue)
 
 ## 🚀 Live Demo
 
@@ -25,7 +25,7 @@
 
 ### 2. High-Quality AI Generation (`/api/generate`)
 
-- **Model**: Google Gemini 1.5 Flash (via Vercel AI SDK).
+- **Generative AI**: Google Gemini 3 Flash Preview (via Vercel AI SDK) for fast, structured, and context-aware repurposing.
 - **Persona**: Expert Content Marketer with a "Vibe Coder" tone (modern, punchy, viral).
 - **Structured JSON**: No hallucinated formatting. The API returns strict JSON for the UI to render.
 
@@ -47,17 +47,17 @@
 
 ## 🛠️ Tech Stack & Reasoning
 
-| Choice                       | Reasoning (2-3 Sentences)                                                                                                                                                                            |
-| :--------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Next.js 14 (App Router)**  | Chosen for its unified architecture. API routes (`/api/scrape`) live alongside the UI, simplifying deployment and avoiding CORS issues. React Server Components ensure fast initial load.            |
-| **Tailwind CSS + shadcn/ui** | Speed of development. `shadcn/ui` provides accessible, copy-paste components (Cards, Tabs, Inputs) that look professional out of the box, allowing me to focus on logic rather than CSS.             |
-| **Vercel AI SDK**            | The gold standard for AI integration in Next.js. It simplifies streaming, structured object generation (`generateObject`), and provider abstraction, making the code cleaner and easier to maintain. |
-| **Google Gemini 1.5 Flash**  | Selected for its **speed** and **generous free tier**. It processes long blog contexts instantly and is cost-effective compared to GPT-4, adhering to the "no paid API keys required" constraint.    |
-| **Cheerio**                  | Lightweight and fast. Unlike Puppeteer/Playwright (headless browsers), Cheerio parses HTML directly, which is faster and less resource-intensive for simple text extraction tasks.                   |
+| Choice                            | Reasoning (2-3 Sentences)                                                                                                                                                                            |
+| :-------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Next.js 14 (App Router)**       | Chosen for its unified architecture. API routes (`/api/scrape`) live alongside the UI, simplifying deployment and avoiding CORS issues. React Server Components ensure fast initial load.            |
+| **Tailwind CSS + shadcn/ui**      | Speed of development. `shadcn/ui` provides accessible, copy-paste components (Cards, Tabs, Inputs) that look professional out of the box, allowing me to focus on logic rather than CSS.             |
+| **Vercel AI SDK**                 | The gold standard for AI integration in Next.js. It simplifies streaming, structured object generation (`generateObject`), and provider abstraction, making the code cleaner and easier to maintain. |
+| **Google Gemini 3 Flash Preview** | Selected for its **speed** and **generous free tier**. It processes long blog contexts instantly and is cost-effective compared to GPT-4, adhering to the "no paid API keys required" constraint.    |
+| **Cheerio**                       | Lightweight and fast. Unlike Puppeteer/Playwright (headless browsers), Cheerio parses HTML directly, which is faster and less resource-intensive for simple text extraction tasks.                   |
 
 ## 🤖 AI Tools Used
 
-- **Google Gemini 1.5 Flash**: The core intelligence engine for content repurposing.
+- **Google Gemini 3 Flash Preview**: The core intelligence engine for content repurposing.
 - **Vercel AI SDK**: Framework for connecting the frontend to the LLM.
 - **Google Deepmind Agent**: Assisted with boilerplate code generation (shadcn setup), debugging extraction logic, and refining the "Expert Marketer" system prompt.
 

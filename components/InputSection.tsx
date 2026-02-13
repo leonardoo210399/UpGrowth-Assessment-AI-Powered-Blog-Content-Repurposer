@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
-import { Sparkles, ArrowRight } from "lucide-react";
+import { Sparkles, ArrowRight, Loader2 } from "lucide-react";
 
 export function InputSection({ onGenerate, isLoading }: { onGenerate: (url: string) => void, isLoading: boolean }) {
   const [url, setUrl] = useState("");
@@ -41,7 +41,10 @@ export function InputSection({ onGenerate, isLoading }: { onGenerate: (url: stri
             />
             <Button size="lg" className="h-12 px-6" disabled={isLoading}>
               {isLoading ? (
-                "Processing..."
+                <>
+                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                  Generating...
+                </>
               ) : (
                 <>
                   Generate <ArrowRight className="ml-2 w-4 h-4" />
