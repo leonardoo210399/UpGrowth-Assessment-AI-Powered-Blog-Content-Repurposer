@@ -35,7 +35,7 @@ export function InputSection({ onGenerate, isLoading }: { onGenerate: (url: stri
           <form onSubmit={handleSubmit} className="flex gap-2 p-1">
             <Input 
               placeholder="https://upgrowth.in/blog/..." 
-              className="border-0 focus-visible:ring-0 shadow-none text-base h-12"
+              className="border-0 focus-visible:ring-0 shadow-none text-base h-12 placeholder:text-gray-400"
               value={url}
               onChange={(e) => setUrl(e.target.value)}
             />
