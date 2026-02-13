@@ -132,7 +132,7 @@ function ResultCard({ title, content, onCopy, isCopied }: { title: string, conte
                 <CardTitle className="text-base">{title}</CardTitle>
             </CardHeader>
             <CardContent className="flex-1 text-sm text-muted-foreground whitespace-pre-wrap">
-                {content}
+                {content.replace(/\\n/g, '\n')}
             </CardContent>
             <div className="p-4 pt-0 mt-auto">
                 <Button variant="secondary" className="w-full" onClick={onCopy}>

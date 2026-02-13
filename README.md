@@ -6,7 +6,9 @@
 
 ## 🚀 Live Demo
 
-[Insert Your Live Vercel/Netlify URL Here]
+[https://up-growth-assessment-ai-powered-blo.vercel.app](https://up-growth-assessment-ai-powered-blo.vercel.app)
+
+> Note: Production deployment on Vercel.
 
 ## 📋 The Assignment
 
@@ -112,5 +114,5 @@ If I had more time, I would add:
 
 ---
 
-**Submitted by:** [Your Name]
+**Submitted by:** Aditya Fulzele
 **For:** upGrowth Digital LLP Assessment
