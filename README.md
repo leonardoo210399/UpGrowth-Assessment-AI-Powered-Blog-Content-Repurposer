@@ -21,7 +21,7 @@
 
 - **Universal Scraper**: Uses `cheerio` with intelligent selectors (`entry-content`, `article`, `main`) to handle WordPress, custom sites, and generic blogs.
 - **Sanitization**: Automatically removes scripts, styles, and navigational clutter to feed clean text to the AI.
-- **Error Resilience**: Gracefully handles 404s, timeouts, and un-scrapable content.
+- **Error Resilience**: User-friendly feedback for Rate Limits (429), Content Safety Blocks, 404s, and un-scrapable content.
 
 ### 2. High-Quality AI Generation (`/api/generate`)
 

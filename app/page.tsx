@@ -57,13 +57,26 @@ export default function Home() {
         
         {error && (
             <div className="w-full max-w-lg p-4 mb-8 bg-destructive/10 text-destructive rounded-lg border border-destructive/20 text-center">
-                {error.includes("quota") || error.includes("429") ? (
+                {error.toLowerCase().includes("quota") || error.includes("429") ? (
                   <>
                     <strong>High Traffic! 🚦</strong>
                     <p className="text-sm mt-1">We're on the free tier of Google Gemini. Please wait 60 seconds and try again.</p>
                   </>
+                ) : error.toLowerCase().includes("scrape") || error.includes("404") || error.toLowerCase().includes("url") ? (
+                  <>
+                    <strong>Unable to Read Blog 🚫</strong>
+                    <p className="text-sm mt-1">Is the URL public? Sometimes firewalls block scrapers. Try a different article.</p>
+                  </>
+                ) : error.toLowerCase().includes("safety") || error.toLowerCase().includes("blocked") ? (
+                  <>
+                    <strong>Content Flagged ⚠️</strong>
+                    <p className="text-sm mt-1">The AI refused to process this content due to safety guidelines.</p>
+                  </>
                 ) : (
-                  error
+                  <>
+                    <strong>Error</strong>
+                    <p className="text-sm mt-1">{error}</p>
+                  </>
                 )}
             </div>
         )}
