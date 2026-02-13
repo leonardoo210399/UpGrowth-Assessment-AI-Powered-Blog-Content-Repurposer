@@ -63,14 +63,14 @@
 
 ## ⏱️ Time Log (Rough Breakdown)
 
-| Activity                | Time Spent     | Notes                                                         |
-| :---------------------- | :------------- | :------------------------------------------------------------ |
-| **1. Planning & Setup** | ~30 mins       | Tech stack selection, project initialization.                 |
-| **2. Scraper Service**  | ~1 hour        | Implementing generic extraction, handling 404s/timeouts.      |
-| **3. UI Development**   | ~1.5 hours     | Building `InputSection`, `ResultsSection`, Responsive layout. |
-| **4. AI Integration**   | ~1 hour        | Prompt engineering (Persona), Vercel SDK setup, JSON schema.  |
-| **5. Polish & Deploy**  | ~30 mins       | Loading states, Copy functionality, README, Deployment.       |
-| **Total**               | **~4.5 Hours** | Fits within the 3-5 hour estimated effort.                    |
+| Activity                | Time Spent   | Notes                                                         |
+| :---------------------- | :----------- | :------------------------------------------------------------ |
+| **1. Planning & Setup** | ~20 mins     | Tech stack selection, project initialization.                 |
+| **2. Scraper Service**  | ~50 mins     | Implementing generic extraction, handling 404s/timeouts.      |
+| **3. UI Development**   | ~60 mins     | Building `InputSection`, `ResultsSection`, Responsive layout. |
+| **4. AI Integration**   | ~40 mins     | Prompt engineering (Persona), Vercel SDK setup, JSON schema.  |
+| **5. Polish & Deploy**  | ~10 mins     | Loading states, Copy functionality, README, Deployment.       |
+| **Total**               | **~3 Hours** | Fits perfectly within the 3-5 hour estimated effort.          |
 
 ## 🚀 Setup Instructions (Local)
 
