@@ -57,7 +57,14 @@ export default function Home() {
         
         {error && (
             <div className="w-full max-w-lg p-4 mb-8 bg-destructive/10 text-destructive rounded-lg border border-destructive/20 text-center">
-                {error}
+                {error.includes("quota") || error.includes("429") ? (
+                  <>
+                    <strong>High Traffic! 🚦</strong>
+                    <p className="text-sm mt-1">We're on the free tier of Google Gemini. Please wait 60 seconds and try again.</p>
+                  </>
+                ) : (
+                  error
+                )}
             </div>
         )}
 
